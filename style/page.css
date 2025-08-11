@@ -1,0 +1,43 @@
+/* Image */
+.dema {
+    background-color: var(--color-background-dema);
+}
+
+.fiveMods {
+    background-color: var(--color-background-fiveMods);
+}
+
+.figma {
+    background-color: var(--color-background-figma);
+}
+
+.logos {
+    background-color: var(--color-background-logos);
+    padding: 257px 533px;
+}
+
+.rdr {
+    background-color: var(--color-background-rdr);
+    padding: 88px 245px;
+}
+
+/* Footer */
+
+.footer__wrapper {
+    margin: 0 auto;
+    padding: 127px 0;
+    width: var(--layout-width);
+    height: 300px;
+    padding: 30px;
+}
+
+.footer__icon {
+    display: flex;
+    justify-content: center;
+    padding: 97px 0 72px;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: space-between;
+}

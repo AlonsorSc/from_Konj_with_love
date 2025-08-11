@@ -2,13 +2,8 @@
       font-family: "Neco", sans-serif;
   }
 
-  /* Section */
-
-  .section_card {
-      background-color: var(--color-white);
-  }
-
   .section {
+      background-color: var(--color-white);
       border-radius: 10px;
       width: var(--layout-width);
       margin: 0 auto;
@@ -60,9 +55,9 @@
   }
 
   .card__img {
+      width: 1405px;
       padding: 118px 209px;
       height: auto;
-      background-color: var(--color-image-one);
       border: none;
       border-radius: 5px;
   }

@@ -5,7 +5,13 @@
     --color-tertiary: #EFF1F4;
     --color-black: #103339;
     --color-text: #242632;
-    --color-image-one: #E9F2F8;
+    --color-image-one: ;
+    --color-background-dema: #E9F2F8;
+    --color-background-fiveMods: #7087CB;
+    --color-background-figma: #E1E3E7;
+    --color-background-logos: #491E88;
+    --color-background-rdr: #8C1616;
+
 
     --font-size-32: 32px;
     --font-size-28: 28px;
