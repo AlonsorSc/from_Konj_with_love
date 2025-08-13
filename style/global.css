@@ -5,7 +5,6 @@
     --color-tertiary: #EFF1F4;
     --color-black: #103339;
     --color-text: #242632;
-    --color-image-one: ;
     --color-background-dema: #E9F2F8;
     --color-background-fiveMods: #7087CB;
     --color-background-figma: #E1E3E7;
@@ -15,10 +14,12 @@
 
     --font-size-32: 32px;
     --font-size-28: 28px;
+    --font-size-25: 25px;
     --font-size-18: 18px;
     --font-lineheight-120: 120%;
     --font-lineheight-140: 140%;
-    --layout-width: 1815px;
+    --layout-width: 1820px;
+    --layout-width-middle: 905px;
 }
 
 * {
@@ -42,6 +43,21 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -127px;
+    width: 100vw;
+    height: 197px;
+    background-image: url('/images/background-img/pattern.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: 98.5px 98.5px;
+    z-index: 1;
 }
 
 a {

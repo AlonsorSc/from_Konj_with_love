@@ -21,12 +21,14 @@
     padding: 88px 245px;
 }
 
+.tech {
+    background-color: var(--color-primary);
+}
+
 /* Footer */
 
 .footer__wrapper {
-    margin: 0 auto;
     padding: 127px 0;
-    width: var(--layout-width);
     height: 300px;
     padding: 30px;
 }
