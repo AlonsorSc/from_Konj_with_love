@@ -87,22 +87,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 600px;
+        aspect-ratio: 16 / 10;
         width: 50%;
-        border: none;
         border-radius: 5px;
-        flex-shrink: 0;
         overflow: hidden;
         position: relative;
+        padding: 20px;
     }
 
     .card__img img {
         max-width: 100%;
         max-height: 100%;
-        width: auto;
-        height: auto;
         object-fit: contain;
-        display: block;
     }
 
     .card__block {
@@ -142,7 +138,11 @@
 
     /* card__midle */
 
-
+    .card__middle {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
     .card__middle_info {
         display: flex;
@@ -150,7 +150,6 @@
     }
 
     .card__middle_img {
-        min-height: 1014px;
         border-radius: 10px;
         padding: 5px;
         background-color: var(--color-white);
@@ -158,13 +157,14 @@
 
     .middle__calendar,
     .middle__pozvonochnik {
-        border: none;
+        aspect-ratio: 16 / 10;
+        width: 100%;
         border-radius: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        position: relative;
+        padding: 20px;
     }
 
     .middle__calendar img,
@@ -228,14 +228,13 @@
     }
 
     .card__high_img {
+        aspect-ratio: 16 / 9;
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 600px;
-        padding: 40px;
+        padding: 20px;
         border: none;
         border-radius: 5px;
-        flex-shrink: 0;
         overflow: hidden;
         position: relative;
     }
@@ -258,10 +257,10 @@
 
         .card__img {
             width: 100%;
-            min-height: 400px;
+            aspect-ratio: 16 / 9;
         }
 
-        .card__middle_info {
+        пр .card__middle_info {
             flex-direction: column;
         }
 
@@ -276,18 +275,15 @@
 
     @media (max-width: 768px) {
         .card__img {
-            min-height: 350px;
             padding: 30px;
         }
 
         .middle__calendar,
         .middle__pozvonochnik {
-            min-height: 350px;
             padding: 30px;
         }
 
         .card__high_img {
-            min-height: 350px;
             padding: 30px;
         }
 
@@ -298,35 +294,20 @@
 
     @media (max-width: 480px) {
         .card__img {
-            min-height: 250px;
             padding: 20px;
+            aspect-ratio: 4 / 3;
         }
 
-        .card__img img {
-            max-width: 90%;
-            max-height: 90%;
-        }
 
         .middle__calendar,
         .middle__pozvonochnik {
-            min-height: 250px;
             padding: 20px;
-        }
-
-        .middle__calendar img,
-        .middle__pozvonochnik img {
-            max-width: 90%;
-            max-height: 90%;
+            aspect-ratio: 4 / 3;
         }
 
         .card__high_img {
-            min-height: 250px;
             padding: 20px;
-        }
-
-        .card__high_img img {
-            max-width: 90%;
-            max-height: 90%;
+            aspect-ratio: 4 / 3;
         }
 
         .card__info {
