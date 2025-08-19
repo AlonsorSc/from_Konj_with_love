@@ -13,12 +13,10 @@
 
 .logos {
     background-color: var(--color-background-logos);
-    padding: 257px 533px;
 }
 
 .rdr {
     background-color: var(--color-background-rdr);
-    padding: 88px 245px;
 }
 
 .tech {

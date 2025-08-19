@@ -75,7 +75,7 @@
         justify-content: space-between;
         gap: 5px;
         min-height: 800px;
-        max-width: var(--layout-width);
+
     }
 
     .card__info {
@@ -84,12 +84,25 @@
     }
 
     .card__img {
-        max-width: 1405px;
-        padding: 118px 209px;
-        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 600px;
+        width: 50%;
         border: none;
         border-radius: 5px;
         flex-shrink: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .card__img img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
     }
 
     .card__block {
@@ -129,12 +142,7 @@
 
     /* card__midle */
 
-    .card__middle {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+
 
     .card__middle_info {
         display: flex;
@@ -142,29 +150,31 @@
     }
 
     .card__middle_img {
-
         min-height: 1014px;
         border-radius: 10px;
         padding: 5px;
         background-color: var(--color-white);
     }
 
-    .middle__calendar {
-        padding: 138px 249px;
+    .middle__calendar,
+    .middle__pozvonochnik {
         border: none;
         border-radius: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        position: relative;
     }
 
-    .middle__pozvonochnik {
-        padding: 63px 718px;
-        border: none;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .middle__calendar img,
+    .middle__pozvonochnik img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
     }
 
     .card__middle_block {
@@ -218,9 +228,117 @@
     }
 
     .card__high_img {
-        padding: 159px 287px;
-        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 600px;
+        padding: 40px;
         border: none;
         border-radius: 5px;
         flex-shrink: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .card__high_img img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .card {
+            flex-direction: column;
+            min-height: auto;
+        }
+
+        .card__img {
+            width: 100%;
+            min-height: 400px;
+        }
+
+        .card__middle_info {
+            flex-direction: column;
+        }
+
+        .card__high_info {
+            padding: 25px 50px;
+        }
+
+        .card__middle_cloud {
+            padding: 30px 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card__img {
+            min-height: 350px;
+            padding: 30px;
+        }
+
+        .middle__calendar,
+        .middle__pozvonochnik {
+            min-height: 350px;
+            padding: 30px;
+        }
+
+        .card__high_img {
+            min-height: 350px;
+            padding: 30px;
+        }
+
+        .card__middle_img {
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card__img {
+            min-height: 250px;
+            padding: 20px;
+        }
+
+        .card__img img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .middle__calendar,
+        .middle__pozvonochnik {
+            min-height: 250px;
+            padding: 20px;
+        }
+
+        .middle__calendar img,
+        .middle__pozvonochnik img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .card__high_img {
+            min-height: 250px;
+            padding: 20px;
+        }
+
+        .card__high_img img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .card__info {
+            padding: 20px;
+        }
+
+        .card__middle_block,
+        .card__middle_cloud {
+            padding: 20px;
+        }
+
+        .card__high_info {
+            padding: 20px;
+        }
     }
