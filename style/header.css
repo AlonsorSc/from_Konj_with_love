@@ -1,21 +1,27 @@
 .header__wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 101px;
     padding: 30px;
-    height: 300px;
+    min-height: 300px;
+    /* изменено с height на min-height */
 }
 
 .header__info {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
+    /* изменено с center на flex-start */
 }
 
 .header__links {
     display: flex;
-
-    flex-direction: column;
+    justify-content: space-between;
     align-items: flex-end;
+}
+
+.header__about {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -23,4 +29,84 @@
     font-size: var(--font-size-28);
     line-height: var(--font-lineheight-120);
     font-weight: 500;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .header__wrapper {
+        padding: 24px;
+        gap: 60px;
+        /* уменьшаем gap */
+        min-height: 240px;
+    }
+}
+
+/* Новый брейкпоинт для проблемной области */
+@media (max-width: 850px) {
+    .header__wrapper {
+        gap: 50px;
+        /* еще меньше gap */
+        min-height: auto;
+    }
+
+    .header__info {
+        flex-direction: column;
+        /* вертикальное расположение */
+        gap: 40px;
+    }
+
+    .header__links {
+        flex-direction: column;
+        /* возвращаем горизонтальное расположение */
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header__about-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__wrapper {
+        padding: 21px;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .header__info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header__links {
+        flex-direction: column;
+        /* возвращаем горизонтальное расположение */
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header__about-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__wrapper {
+        padding: 18px;
+        gap: 20px;
+        min-height: auto;
+    }
+
+    .header__links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* Убираем ограничение ширины на мобильных */
+    .font__width_800 {
+        max-width: 100%;
+    }
 }

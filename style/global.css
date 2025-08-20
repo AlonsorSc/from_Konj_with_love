@@ -63,3 +63,12 @@ body::before {
 a {
     text-decoration: none;
 }
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-32: 19px;
+        --font-size-28: 17px;
+        --font-size-25: 15px;
+        --font-size-18: 11px;
+    }
+}
