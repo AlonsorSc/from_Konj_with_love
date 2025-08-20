@@ -1,700 +1,548 @@
+/* Базовые заголовки - остаются для совместимости */
+h2 {
+    font-size: var(--font-size-32);
+    line-height: var(--font-lineheight-120);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--font-size-28);
+    line-height: var(--font-lineheight-120);
+    font-weight: 500;
+}
+
+/* Section - универсальный класс для всех страниц */
+.section {
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+/* ===== НОВЫЕ БЭМ КОМПОНЕНТЫ ===== */
+
+/* Text Component - используется в новой БЭМ структуре */
+.text {
+    font-size: var(--font-size-18);
+    line-height: var(--font-lineheight-140);
+    color: var(--color-text);
+    margin: 0;
+}
+
+.text--size-large {
+    font-size: var(--font-size-25);
+}
+
+.text--size-xlarge {
+    font-size: var(--font-size-28);
+    line-height: var(--font-lineheight-120);
+}
+
+.text--size-xxlarge {
+    font-size: var(--font-size-32);
+    line-height: var(--font-lineheight-120);
+}
+
+.text--weight-medium {
+    font-weight: 500;
+}
+
+.text--weight-semibold {
+    font-weight: 600;
+}
+
+.text--weight-bold {
+    font-weight: 700;
+}
+
+.text--font-neco {
+    font-family: "Neco", sans-serif;
+}
+
+.text--width-constrained {
+    max-width: 600px;
+}
+
+.text--width-wide {
+    max-width: 800px;
+}
+
+.text--align-center {
+    text-align: center;
+}
+
+/* Link Component - новый БЭМ компонент */
+.link {
+    position: relative;
+    display: inline-block;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.link:hover {
+    opacity: 0.7;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath d='M0,2 Q5,0 10,2 T20,2' stroke='%23999999' stroke-width='1' fill='none' opacity='0.8'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 20px 4px;
+}
+
+/* Links List Component - новый БЭМ компонент */
+.links-list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Image Component - универсальный компонент */
+.image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image--contain {
+    object-fit: contain;
+}
+
+/* Divider Component - универсальный разделитель */
+.divider {
+    border: none;
+    border-bottom: 1px solid var(--color-tertiary);
+    width: 100%;
+    margin: 25px 0;
+}
+
+.divider--spacing-small {
+    margin: 16px 0;
+}
+
+.divider--spacing-large {
+    margin: 30px 0;
+}
+
+/* ===== СТАРЫЕ КЛАССЫ ДЛЯ СОВМЕСТИМОСТИ ===== */
+
+/* Старые ссылки - оставляем для совместимости со старыми страницами */
+.links {
+    display: flex;
+    gap: 16px;
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links a {
+    position: relative;
+    color: var(--color-text);
+    font-size: var(--font-size-18);
+    line-height: var(--font-lineheight-140);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath d='M0,2 Q5,0 10,2 T20,2' stroke='%23999999' stroke-width='1' fill='none' opacity='0.8'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 20px 4px;
+}
+
+.links li {
+    list-style: none;
+}
+
+.link__item {
+    list-style: none;
+}
+
+/* Старый copyright класс */
+.copywhrite {
+    font-size: var(--font-size-18);
+    line-height: var(--font-lineheight-140);
+}
+
+.copywhrite_header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.copywhrite_footer {
+    padding-bottom: 25px;
+}
+
+/* ===== СТАРЫЕ КАРТОЧКИ - ОСТАВЛЯЕМ ДЛЯ СОВМЕСТИМОСТИ ===== */
+
+.card {
+    padding: 5px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    min-height: 800px;
+}
+
+.card__info {
+    padding: 25px;
+    flex: 1;
+}
+
+.card__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 10;
+    width: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+.card__img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card__block {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card__conditions-text {
+    font-size: var(--font-size-18);
+    font-weight: 600;
+    line-height: var(--font-lineheight-140);
+}
+
+.card__about {
+    font-size: var(--font-size-18);
+    line-height: var(--font-lineheight-140);
+}
+
+.card__experience {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: var(--font-size-18);
+    line-height: var(--font-lineheight-140);
+}
+
+.border {
+    border-bottom: 1px solid var(--color-tertiary);
+    width: 100%;
+    margin: 25px 0;
+}
+
+.card__date {
+    margin-left: 16px;
+}
+
+/* card__middle - старые стили */
+.card__middle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__middle_info {
+    display: flex;
+    gap: 10px;
+}
+
+.card__middle_img {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--color-white);
+}
+
+.middle__calendar,
+.middle__pozvonochnik {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.middle__calendar img,
+.middle__pozvonochnik img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.card__middle_block {
+    min-height: 194px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: auto;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card__middle_cloud {
+    min-height: 194px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: auto;
+    background-color: var(--color-white);
+    padding: 30px 350px;
+    border-radius: 10px;
+}
+
+.card__middle_cloud p,
+.card__high_info p {
+    text-align: center;
+}
+
+/* card__high - старые стили */
+.card__high {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.card__high_info {
+    max-width: var(--layout-width);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 350px;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.card__high_img {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__high_img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* 1200px - Небольшие планшеты и маленькие ноутбуки */
+@media (max-width: 1200px) {
+
+    /* Шрифты - уменьшаем на 10% */
     h2 {
-        font-size: var(--font-size-32);
-        line-height: var(--font-lineheight-120);
-        font-weight: 700;
+        font-size: 29px;
     }
 
     h3 {
-        font-size: var(--font-size-28);
-        line-height: var(--font-lineheight-120);
-        font-weight: 500;
+        font-size: 25px;
     }
 
-    .font-neco {
-        font-family: "Neco", sans-serif;
+    .text {
+        font-size: 16px;
     }
 
-    .font__width_600 {
-        max-width: 600px;
+    .text--size-large {
+        font-size: 22px;
     }
 
-    .font__width_800 {
-        max-width: 800px;
+    .text--size-xlarge {
+        font-size: 25px;
     }
 
-
-    .section {
-        background-color: var(--color-white);
-        border-radius: 10px;
+    .text--size-xxlarge {
+        font-size: 29px;
     }
 
-    /* links */
-
-    .links {
-        display: flex;
-        gap: 16px;
-        position: relative;
-        text-decoration: none;
-    }
-
-    .links a {
-        position: relative;
-        color: var(--color-text);
-        font-size: var(--font-size-18);
-        line-height: var(--font-lineheight-140);
-        display: inline-block;
-    }
-
-    .links a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -8px;
-        width: 100%;
-        height: 8px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath d='M0,2 Q5,0 10,2 T20,2' stroke='%23999999' stroke-width='1' fill='none' opacity='0.8'/%3E%3C/svg%3E");
-        background-repeat: repeat-x;
-        background-size: 20px 4px;
-    }
-
-    .links li {
-        list-style: none;
-    }
-
+    .links a,
     .copywhrite {
-        font-size: var(--font-size-18);
-        line-height: var(--font-lineheight-140);
+        font-size: 16px;
+    }
+}
+
+/* 1024px - Планшеты в альбомной ориентации */
+@media (max-width: 1024px) {
+
+    /* Шрифты - уменьшаем на 20% */
+    h2 {
+        font-size: 26px;
     }
 
-    .copywhrite_header {
-        display: flex;
-        justify-content: flex-end;
+    h3 {
+        font-size: 22px;
     }
 
-    /* Card */
-
-    .card {
-        padding: 5px;
-        border: none;
-        display: flex;
-        justify-content: space-between;
-        gap: 5px;
-        min-height: 800px;
-
+    .text {
+        font-size: 14px;
     }
 
-    .card__info {
-        padding: 25px;
-        flex: 1;
+    .text--size-large {
+        font-size: 20px;
     }
 
-    .homepage .card__img {
-        width: 66.66%;
-        /* 2/3 от ширины */
+    .text--size-xlarge {
+        font-size: 22px;
     }
 
-    .card__img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        aspect-ratio: 16 / 10;
-        width: 50%;
-        border-radius: 5px;
-        overflow: hidden;
-        position: relative;
-        padding: 20px;
+    .text--size-xxlarge {
+        font-size: 26px;
     }
 
-    .homepage .card__img {
-        width: 66.66%;
-        /* 2/3 от ширины */
+    .links a,
+    .copywhrite {
+        font-size: 14px;
     }
 
-    .card__img img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
-
-    .card__block {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .card__conditions-text {
-        font-size: var(--font-size-18);
-        font-weight: 600;
-        line-height: var(--font-lineheight-140);
-    }
-
-    .card__about {
-        font-size: var(--font-size-18);
-        line-height: var(--font-lineheight-140);
-    }
-
-    .card__experience {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        font-size: var(--font-size-18);
-        line-height: var(--font-lineheight-140);
-    }
-
-    .border {
-        border-bottom: 1px solid var(--color-tertiary);
-        width: 100%;
-        margin: 25px 0;
-    }
-
-    .card__date {
-        margin-left: 16px;
-    }
-
-    /* card__midle */
-
-    .card__middle {
-        display: flex;
+    .links-list {
         flex-direction: column;
         gap: 10px;
     }
 
-    .card__middle_info {
-        display: flex;
-        gap: 10px;
-    }
-
-    .card__middle_img {
-        border-radius: 10px;
-        padding: 5px;
-        background-color: var(--color-white);
-    }
-
-    .middle__calendar,
-    .middle__pozvonochnik {
-        aspect-ratio: 16 / 10;
-        width: 100%;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        padding: 20px;
-    }
-
-    .middle__calendar img,
-    .middle__pozvonochnik img {
+    /* Максимальная ширина текстовых блоков */
+    .font__width_600,
+    .text--width-constrained {
         max-width: 100%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        display: block;
     }
 
-    .card__middle_block {
-        min-height: 194px;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        max-width: auto;
-        background-color: var(--color-white);
-        padding: 30px;
-        border-radius: 10px;
-    }
-
-    .card__middle_cloud {
-        min-height: 194px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        max-width: auto;
-        background-color: var(--color-white);
-        padding: 30px 350px;
-        border-radius: 10px;
-    }
-
-    .card__middle_cloud p,
-    .card__high_info p {
-        text-align: center;
-    }
-
-    /* card__high */
-
-    .card__high {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        background-color: var(--color-white);
-        border-radius: 10px;
-        padding: 5px;
-    }
-
-    .card__high_info {
-        max-width: var(--layout-width);
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        padding: 25px 350px;
-        align-items: center;
-        background-color: var(--color-white);
-        border-radius: 10px;
-    }
-
-    .card__high_img {
-        aspect-ratio: 16 / 9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        border: none;
-        border-radius: 5px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .card__high_img img {
+    .font__width_800,
+    .text--width-wide {
         max-width: 100%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        display: block;
+    }
+}
+
+/* 768px - Планшеты в портретной ориентации */
+@media (max-width: 768px) {
+
+    /* Шрифты - уменьшаем на 30% */
+    h2 {
+        font-size: 22px;
     }
 
-    /* Responsive Design */
-
-    /* 1200px - Небольшие планшеты и маленькие ноутбуки */
-    @media (max-width: 1200px) {
-
-        /* Шрифты - уменьшаем на 10% */
-        h2 {
-            font-size: 29px;
-            /* было 32px */
-        }
-
-        h3 {
-            font-size: 25px;
-            /* было 28px */
-        }
-
-        .header__about-text {
-            font-size: 25px;
-            /* было 28px */
-        }
-
-        .links a,
-        .copywhrite,
-        .card__conditions-text,
-        .card__about,
-        .card__experience {
-            font-size: 16px;
-            /* было 18px */
-        }
-
-        /* Отступы - уменьшаем пропорционально */
-        .card {
-            padding: 5px;
-            gap: 5px;
-            min-height: 720px;
-            /* было 800px */
-        }
-
-        .card__info {
-            padding: 23px;
-            /* было 25px */
-        }
-
-        .homepage .card__info {
-            width: 33.33%;
-            /* остается 1/3 */
-        }
-
-        .card__img {
-            padding: 18px;
-            /* было 20px */
-        }
-
-        .homepage .card__img {
-            width: 66.66%;
-            /* остается 2/3 */
-        }
-
-        .middle__calendar,
-        .middle__pozvonochnik,
-        .card__high_img {
-            padding: 18px;
-            /* было 20px */
-        }
-
-        .card__middle_block {
-            padding: 27px;
-            /* было 30px */
-            min-height: 175px;
-            /* было 194px */
-        }
-
-        .card__middle_cloud {
-            padding: 27px 315px;
-            /* было 30px 350px */
-            min-height: 175px;
-        }
-
-        .card__high_info {
-            padding: 23px 315px;
-            /* было 25px 350px */
-        }
-
-        /* Промежутки */
-        .card__block {
-            gap: 23px;
-            /* было 25px */
-        }
-
-        .border {
-            margin: 23px 0;
-            /* было 25px 0 */
-        }
+    h3 {
+        font-size: 20px;
     }
 
-    /* 1024px - Планшеты в альбомной ориентации */
-    @media (max-width: 1024px) {
-
-        /* Шрифты - уменьшаем на 20% */
-        h2 {
-            font-size: 26px;
-            /* было 32px */
-        }
-
-        h3 {
-            font-size: 22px;
-            /* было 28px */
-        }
-
-        .header__about-text {
-            font-size: 22px;
-            /* было 28px */
-        }
-
-        .links a,
-        .copywhrite,
-        .card__conditions-text,
-        .card__about,
-        .card__experience {
-            font-size: 14px;
-            /* было 18px */
-        }
-
-        /* Макет карточек - вертикальный */
-        .card {
-            flex-direction: column;
-            min-height: auto;
-            padding: 5px;
-        }
-
-        .card__img {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            /* более широкий формат */
-            padding: 16px;
-            /* было 20px */
-        }
-
-        .card__info {
-            padding: 20px;
-            /* было 25px */
-        }
-
-        .homepage .card__img,
-        .homepage .card__info {
-            width: 100%;
-            /* оба блока на всю ширину */
-        }
-
-        /* Средние карточки */
-        .card__middle_info {
-            flex-direction: column;
-        }
-
-        .middle__calendar,
-        .middle__pozvonochnik {
-            padding: 16px;
-            aspect-ratio: 16 / 9;
-        }
-
-        .card__high_img {
-            padding: 16px;
-            aspect-ratio: 16 / 9;
-        }
-
-        .card__middle_block {
-            padding: 24px;
-            /* было 30px */
-            min-height: 155px;
-            /* было 194px */
-        }
-
-        .card__middle_cloud {
-            padding: 24px 80px;
-            /* было 30px 350px */
-            min-height: 155px;
-        }
-
-        .card__high_info {
-            padding: 20px 80px;
-            /* было 25px 350px */
-        }
-
-        /* Промежутки */
-        .card__block {
-            gap: 20px;
-            /* было 25px */
-        }
-
-        .border {
-            margin: 20px 0;
-            /* было 25px 0 */
-        }
-
-        /* Максимальная ширина текстовых блоков */
-        .font__width_600 {
-            max-width: 100%;
-        }
-
-        .font__width_800 {
-            max-width: 100%;
-        }
+    .text {
+        font-size: 13px;
     }
 
-    /* 768px - Планшеты в портретной ориентации */
-    @media (max-width: 768px) {
-
-        /* Шрифты - уменьшаем на 30% */
-        h2 {
-            font-size: 22px;
-            /* было 32px */
-        }
-
-        h3 {
-            font-size: 20px;
-            /* было 28px */
-        }
-
-        .header__about-text {
-            font-size: 20px;
-            /* было 28px */
-        }
-
-        .links a,
-        .copywhrite,
-        .card__conditions-text,
-        .card__about,
-        .card__experience {
-            font-size: 13px;
-            /* было 18px */
-        }
-
-        /* Отступы */
-        .card {
-            padding: 4px;
-            gap: 4px;
-        }
-
-        .card__img {
-            padding: 14px;
-            /* было 20px */
-            aspect-ratio: 4 / 3;
-            /* более квадратный */
-        }
-
-        .card__info {
-            padding: 18px;
-            /* было 25px */
-        }
-
-        .middle__calendar,
-        .middle__pozvonochnik {
-            padding: 14px;
-            aspect-ratio: 4 / 3;
-        }
-
-        .card__high_img {
-            padding: 14px;
-            aspect-ratio: 16 / 9;
-        }
-
-        .card__middle_block {
-            padding: 21px;
-            /* было 30px */
-            min-height: 136px;
-            /* было 194px */
-        }
-
-        .card__middle_cloud {
-            padding: 21px 60px;
-            /* было 30px 350px */
-            min-height: 136px;
-        }
-
-        .card__high_info {
-            padding: 18px 60px;
-            /* было 25px 350px */
-        }
-
-        /* Промежутки */
-        .card__block {
-            gap: 18px;
-            /* было 25px */
-        }
-
-        .border {
-            margin: 18px 0;
-            /* было 25px 0 */
-        }
-
-        /* Закругления */
-        .section {
-            border-radius: 8px;
-            /* было 10px */
-        }
-
-        .card__img,
-        .middle__calendar,
-        .middle__pozvonochnik,
-        .card__high_img {
-            border-radius: 4px;
-            /* было 5px */
-        }
+    .text--size-large {
+        font-size: 18px;
     }
 
-    /* 480px - Мобильные устройства */
-    @media (max-width: 480px) {
-
-        /* Шрифты - уменьшаем на 40% */
-        h2 {
-            font-size: 19px;
-            /* было 32px */
-        }
-
-        h3 {
-            font-size: 17px;
-            /* было 28px */
-        }
-
-        .header__about-text {
-            font-size: 17px;
-            /* было 28px */
-            line-height: 130%;
-            /* увеличиваем для читаемости */
-        }
-
-        .links a,
-        .copywhrite,
-        .card__conditions-text,
-        .card__about,
-        .card__experience {
-            font-size: 11px;
-            /* было 18px */
-            line-height: 150%;
-            /* увеличиваем для читаемости */
-        }
-
-        /* Отступы */
-        body {
-            padding: 20px;
-            /* было 50px */
-        }
-
-        .card {
-            padding: 3px;
-            gap: 3px;
-        }
-
-        .card__img {
-            padding: 12px;
-            /* было 20px */
-            aspect-ratio: 1 / 1;
-            /* квадратный формат */
-        }
-
-        .card__info {
-            padding: 15px;
-            /* было 25px */
-        }
-
-        .middle__calendar,
-        .middle__pozvonochnik {
-            padding: 12px;
-            aspect-ratio: 1 / 1;
-        }
-
-        .card__high_img {
-            padding: 12px;
-            aspect-ratio: 1 / 1;
-        }
-
-        .card__middle_block {
-            padding: 18px;
-            /* было 30px */
-            min-height: 116px;
-            /* было 194px */
-        }
-
-        .card__middle_cloud {
-            padding: 18px 30px;
-            /* было 30px 350px */
-            min-height: 116px;
-        }
-
-        .card__high_info {
-            padding: 15px 30px;
-            /* было 25px 350px */
-        }
-
-        /* Промежутки */
-        .card__block {
-            gap: 15px;
-            /* было 25px */
-        }
-
-        .border {
-            margin: 15px 0;
-            /* было 25px 0 */
-        }
-
-        .card__date {
-            margin-left: 10px;
-            /* было 16px */
-        }
-
-        /* Закругления */
-        .section {
-            border-radius: 6px;
-            /* было 10px */
-        }
-
-        .card__img,
-        .middle__calendar,
-        .middle__pozvonochnik,
-        .card__high_img,
-        .card__middle_block,
-        .card__middle_cloud,
-        .card__high {
-            border-radius: 3px;
-            /* было 5px или 10px */
-        }
-
-        /* Ссылки - вертикальное расположение на мобильных */
-
-
-        /* Промежутки между секциями */
-        body {
-            gap: 5px;
-            /* было 10px */
-        }
-
-        .footer__links {
-            padding-bottom: 20px;
-        }
+    .text--size-xlarge {
+        font-size: 20px;
     }
+
+    .text--size-xxlarge {
+        font-size: 22px;
+    }
+
+    .links a,
+    .copywhrite {
+        font-size: 13px;
+    }
+
+    /* Закругления */
+    .section {
+        border-radius: 8px;
+    }
+}
+
+/* 480px - Мобильные устройства */
+@media (max-width: 480px) {
+
+    /* Шрифты - уменьшаем на 40% */
+    h2 {
+        font-size: 19px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .text {
+        font-size: 11px;
+        line-height: 150%;
+    }
+
+    .text--size-large {
+        font-size: 15px;
+    }
+
+    .text--size-xlarge {
+        font-size: 17px;
+        line-height: 130%;
+    }
+
+    .text--size-xxlarge {
+        font-size: 19px;
+        line-height: 130%;
+    }
+
+    .links a,
+    .copywhrite {
+        font-size: 11px;
+        line-height: 150%;
+    }
+
+    .links-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Закругления */
+    .section {
+        border-radius: 6px;
+    }
+
+    /* Убираем ограничения ширины */
+    .text--width-constrained,
+    .text--width-wide,
+    .font__width_600,
+    .font__width_800 {
+        max-width: none;
+    }
+}

@@ -10,149 +10,274 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=neco@500&display=swap" rel="stylesheet">
+    
+    <!-- Подключаем общие стили -->
     <link rel="stylesheet" href="./style/global.css">
     <link rel="stylesheet" href="./style/header.css">
-    <link rel="stylesheet" href="/style/components.css">
+    <link rel="stylesheet" href="./style/components.css">
     <link rel="stylesheet" href="./style/page.css">
+    <link rel="stylesheet" href="./style/secondpage.css">
 </head>
 
 <body class="secondpage">
+    <!-- Header Block для детальной страницы -->
     <header class="header">
-        <div class="header__wrapper">
-            <div class="header__info">
-                <div class="header__logo">
-                    <a href="#">
-                        <img src="./images/icon-backspace.svg" alt="Стрелка вернуться на предыдущую страницу">
+        <div class="detail-header">
+            <div class="detail-header__content">
+                <div class="detail-header__logo">
+                    <a href="index.html">
+                        <img src="./images/icon-backspace.svg" 
+                             alt="Стрелка вернуться на главную страницу"
+                             class="image">
                     </a>
                 </div>
-                <div class="header__about">
-                    <p class="header__about-text font-neco font__width_800">
+                <div class="detail-header__description">
+                    <p class="text text--size-xlarge text--font-neco text--weight-medium text--width-wide">
                         DEMA – Rehabilitation Centers offer personalized recovery programs based on comprehensive
-                        diagnostics, including
-                        kinesitherapy, massage, and physiotherapy.
+                        diagnostics, including kinesitherapy, massage, and physiotherapy.
                     </p>
                 </div>
             </div>
 
-            <div class="header__links">
-                <div>
-                    Lead Product Designer
-                </div>
-                <span class="copywhrite">
-                    &copy;2025
-                </span>
+            <div class="detail-header__navigation">
+                <div class="text">Lead Product Designer</div>
+                <span class="text">©2025</span>
             </div>
         </div>
     </header>
 
-    <section>
-        <div class="card__middle">
-            <div class="card__middle_info">
-                <div class="card__middle_block">
-                    <h3 class="font-neco">Problem</h3>
-                    <p class="card__about">
+    <!-- Problem & Solution Section -->
+    <section class="section">
+        <article class="content-card">
+            <div class="content-card__info">
+                <div class="content-card__block">
+                    <h3 class="text text--size-xlarge text--font-neco text--weight-medium">Problem</h3>
+                    <p class="text">
                         Application that allows users to automatically install mods for the GTA V multiplayer
-                        modification
-                        framework, FiveM. It
-                        provides a library of mods for various aspects of the game, including graphics, skins,
-                        optimization,
-                        and more.
+                        modification framework, FiveM. It provides a library of mods for various aspects of the game, 
+                        including graphics, skins, optimization, and more.
                     </p>
                 </div>
 
-                <div class="card__middle_block">
-                    <h3 class="font-neco">Solution</h3>
-                    <p class="card__about">
-                        Application that allows users to automatically install mods for the GTA V multiplayer
-                        modification
-                        framework, FiveM. It
-                        provides a library of mods for various aspects of the game, including graphics, skins,
-                        optimization,
-                        and more.
+                <div class="content-card__block">
+                    <h3 class="text text--size-xlarge text--font-neco text--weight-medium">Solution</h3>
+                    <p class="text">
+                        Created an intuitive interface that streamlines the mod installation process with automated
+                        dependency management, conflict resolution, and user-friendly categorization system that
+                        simplifies mod discovery and installation.
                     </p>
                 </div>
             </div>
-            <div class="card__middle_img">
-                <div class="middle__calendar dema">
-                    <img src="./images/background-img/calendar-high.svg" alt="Окно программы Дема">
+            
+            <div class="content-card__image-section">
+                <div class="content-card__image-container content-card__image-container--dema">
+                    <img src="./images/background-img/calendar-high.svg" 
+                         alt="DEMA application detailed interface view"
+                         class="content-card__image image--contain">
                 </div>
             </div>
-        </div>
+        </article>
     </section>
 
-    <section>
-        <div class="card__high">
-            <div class="card__high_info">
-                <h3 class="font-neco">Design System</h3>
-                <p class="card__about">
+    <!-- Design System Section -->
+    <section class="section">
+        <article class="feature-card">
+            <div class="feature-card__content">
+                <h3 class="text text--size-xlarge text--font-neco text--weight-medium">Design System</h3>
+                <p class="text text--align-center">
                     Reimagined with real user insights, design system ensures clarity, consistency, and
-                    adaptability. A modular block-card
-                    structure maintains a cohesive look while allowing flexibility for the future updates. Optimized
-                    layouts, clear visual
-                    hierarchy, and intuitive interactions streamline workflows for a seamless navigation and faster
-                    data entry. Adaptive
-                    design ensures smooth performance across all devices.
+                    adaptability. A modular block-card structure maintains a cohesive look while allowing flexibility 
+                    for future updates. Optimized layouts, clear visual hierarchy, and intuitive interactions 
+                    streamline workflows for seamless navigation and faster data entry. Adaptive design ensures 
+                    smooth performance across all devices.
                 </p>
             </div>
-            <div class="card__high_img tech">
-                <img src="./images/background-img/design-system.svg" alt="Различные дизайн-системы">
+            
+            <div class="feature-card__image-container feature-card__image-container--tech">
+                <img src="./images/background-img/design-system.svg" 
+                     alt="Comprehensive design system components and guidelines"
+                     class="feature-card__image image--contain">
             </div>
-        </div>
+        </article>
     </section>
 
-    <section>
-        <div class="card__middle">
-            <div class="card__middle_info">
-                <div class="card__middle_cloud">
-                    <h3 class="font-neco">Problem</h3>
-                    <p class="card__about">
-                        Application that allows users to automatically install mods for the GTA V multiplayer
-                        modification
-                        framework, FiveM. It
-                        provides a library of mods for various aspects of the game, including graphics, skins,
-                        optimization,
-                        and more.
+    <!-- Research Insights Section -->
+    <section class="section">
+        <article class="content-card">
+            <div class="content-card__info">
+                <div class="content-card__block content-card__block--centered">
+                    <h3 class="text text--size-xlarge text--font-neco text--weight-medium">Research Insights</h3>
+                    <p class="text text--align-center">
+                        Through comprehensive user research and usability testing, we identified key pain points
+                        in the existing workflow. Our findings revealed that users needed clearer visual feedback,
+                        simplified navigation patterns, and more intuitive categorization systems to effectively
+                        manage their rehabilitation programs.
                     </p>
                 </div>
-
             </div>
-            <div class="card__middle_img">
-                <div class="middle__calendar tech">
-                    <img src="./images/background-img/calendar-high.svg" alt="Окно программы Дема">
+            
+            <div class="content-card__image-section">
+                <div class="content-card__image-container content-card__image-container--tech">
+                    <img src="./images/background-img/calendar-high.svg" 
+                         alt="User research findings and insights visualization"
+                         class="content-card__image image--contain">
                 </div>
             </div>
-        </div>
+        </article>
     </section>
 
-    <section>
-        <div class="card__middle">
-            <div class="card__middle_img">
-                <div class="middle__pozvonochnik tech">
-                    <img src="./images/background-img/pozvonochnik.svg" alt="Изображение позвоночника">
+    <!-- Implementation Results Section -->
+    <section class="section">
+        <article class="image-card">
+            <div class="image-card__image-section">
+                <div class="image-card__image-container image-card__image-container--tech">
+                    <img src="./images/background-img/pozvonochnik.svg" 
+                         alt="Final implementation showcasing rehabilitation interface results"
+                         class="image-card__image image--contain">
                 </div>
             </div>
-        </div>
+        </article>
     </section>
 
+    <!-- Footer Block -->
     <footer class="footer">
         <div class="footer__wrapper">
             <div class="footer__icon">
-                <img src="./images/logo-footer.svg" alt="Иконки папок в футере">
+                <img src="./images/logo-footer.svg" 
+                     alt="Иконки папок в футере"
+                     class="image">
             </div>
             <div class="footer__links">
-                <div>
+                <nav>
                     <ul class="links links__footer">
-                        <li class="link__item"><a href="#">LinkedIn</a></li>
-                        <li class="link__item"><a href="mailto:nikkmant@gmail.com">nikkmant@gmail.com</a></li>
-                        <li class="link__item"><a href="#">Telegram</a></li>
+                        <li class="link__item">
+                            <a href="#" class="text">LinkedIn</a>
+                        </li>
+                        <li class="link__item">
+                            <a href="mailto:nikkmant@gmail.com" class="text">nikkmant@gmail.com</a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="text">Telegram</a>
+                        </li>
                     </ul>
-                </div>
-                <span class="copywhrite copywhrite_footer">
-                    &copy;2025
-                </span>
+                </nav>
+                <span class="text copywhrite copywhrite_footer">©2025</span>
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript для обработки изображений -->
+    <script>
+        // Универсальная обработка ошибок загрузки изображений только для secondpage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Проверяем, что мы на secondpage
+            if (!document.body.classList.contains('secondpage')) return;
+            
+            const images = document.querySelectorAll('.content-card__image, .feature-card__image, .image-card__image');
+            
+            images.forEach(img => {
+                // Устанавливаем начальную прозрачность для плавной загрузки
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+                
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                
+                img.addEventListener('error', function() {
+                    console.warn('Изображение не загрузилось:', this.src);
+                    
+                    // Создаем fallback элемент
+                    const fallback = document.createElement('div');
+                    fallback.className = 'image-fallback';
+                    fallback.style.cssText = `
+                        width: 100%;
+                        min-height: 200px;
+                        background: #f8f9fa;
+                        border: 2px dashed #dee2e6;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 5px;
+                        color: #6c757d;
+                        font-family: "Inter Tight", sans-serif;
+                        font-size: 14px;
+                        text-align: center;
+                        padding: 25px;
+                    `;
+                    fallback.innerHTML = `
+                        <div>
+                            <div style="font-size: 24px; margin-bottom: 8px;">📷</div>
+                            <div>Изображение недоступно</div>
+                        </div>
+                    `;
+                    
+                    this.style.display = 'none';
+                    this.parentNode.insertBefore(fallback, this);
+                });
+            });
+        });
+
+        // Функция для динамической смены изображений (для тестирования)
+        function updateContentImage(sectionIndex, newImageSrc, altText = '') {
+            const sections = document.querySelectorAll('.content-card, .feature-card, .image-card');
+            if (sections[sectionIndex]) {
+                const img = sections[sectionIndex].querySelector('.content-card__image, .feature-card__image, .image-card__image');
+                if (img) {
+                    img.src = newImageSrc;
+                    if (altText) img.alt = altText;
+                }
+            }
+        }
+
+        // Функция для адаптивного изменения размеров изображений
+        function adjustImageContainers() {
+            if (!document.body.classList.contains('secondpage')) return;
+            
+            const containers = document.querySelectorAll('.content-card__image-container, .feature-card__image-container, .image-card__image-container');
+            
+            containers.forEach(container => {
+                const img = container.querySelector('img');
+                if (img && img.complete && img.naturalWidth > 0) {
+                    const aspectRatio = img.naturalWidth / img.naturalHeight;
+                    
+                    // Адаптируем padding в зависимости от соотношения сторон
+                    if (aspectRatio > 2.5) {
+                        // Очень широкое изображение (панорама)
+                        container.style.padding = '10px 25px';
+                    } else if (aspectRatio > 1.8) {
+                        // Широкое изображение
+                        container.style.padding = '15px 25px';
+                    } else if (aspectRatio < 0.6) {
+                        // Очень высокое изображение (портрет)
+                        container.style.padding = '25px 10px';
+                    } else if (aspectRatio < 1) {
+                        // Высокое изображение
+                        container.style.padding = '25px 15px';
+                    } else {
+                        // Стандартное соотношение
+                        container.style.padding = '20px';
+                    }
+                }
+            });
+        }
+
+        // Запускаем адаптацию после загрузки всех изображений
+        window.addEventListener('load', adjustImageContainers);
+        
+        // Также запускаем при изменении размера окна
+        window.addEventListener('resize', adjustImageContainers);
+        
+        // Демо функции для тестирования:
+        // updateContentImage(0, 'path/to/new/image.jpg', 'New alt text');
+        // Обновит изображение первой секции (индекс 0)
+        
+        // Примеры использования:
+        // updateContentImage(0, './images/new-calendar.svg', 'Updated calendar interface');
+        // updateContentImage(1, './images/new-design-system.svg', 'Updated design system');
+        // updateContentImage(2, './images/new-research.svg', 'Updated research findings');
+        // updateContentImage(3, './images/new-implementation.svg', 'Updated implementation');
+    </script>
 </body>
 
 </html>

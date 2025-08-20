@@ -1,18 +1,9 @@
-.header__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 101px;
-    padding: 30px;
-    min-height: 300px;
-    /* изменено с height на min-height */
+/* Базовые стили header - совместимость со старой и новой структурой */
+.header {
+    background-color: transparent;
 }
 
-.header__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* изменено с center на flex-start */
-}
+/* Старая структура - для совместимости */
 
 .header__links {
     display: flex;
@@ -25,40 +16,47 @@
     justify-content: space-between;
 }
 
-.header__about-text {
-    font-size: var(--font-size-28);
-    line-height: var(--font-lineheight-120);
-    font-weight: 500;
+/* Новая БЭМ структура */
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    min-height: 300px;
 }
 
-/* Responsive Design */
+.header__logo {
+    width: auto;
+    height: auto;
+}
 
+/* Responsive Design для header */
 @media (max-width: 1024px) {
-    .header__wrapper {
+
+    .header__wrapper,
+    .header__container {
         padding: 24px;
         gap: 60px;
-        /* уменьшаем gap */
         min-height: 240px;
     }
 }
 
-/* Новый брейкпоинт для проблемной области */
 @media (max-width: 850px) {
-    .header__wrapper {
+
+    .header__wrapper,
+    .header__container {
         gap: 50px;
-        /* еще меньше gap */
         min-height: auto;
     }
 
-    .header__info {
+    .header__info,
+    .header__content {
         flex-direction: column;
-        /* вертикальное расположение */
         gap: 40px;
     }
 
-    .header__links {
+    .header__links,
+    .header__navigation {
         flex-direction: column;
-        /* возвращаем горизонтальное расположение */
         align-items: flex-start;
         gap: 20px;
     }
@@ -69,20 +67,23 @@
 }
 
 @media (max-width: 768px) {
-    .header__wrapper {
+
+    .header__wrapper,
+    .header__container {
         padding: 21px;
         gap: 30px;
         min-height: auto;
     }
 
-    .header__info {
+    .header__info,
+    .header__content {
         flex-direction: column;
         gap: 20px;
     }
 
-    .header__links {
+    .header__links,
+    .header__navigation {
         flex-direction: column;
-        /* возвращаем горизонтальное расположение */
         align-items: flex-start;
         gap: 20px;
     }
@@ -93,19 +94,21 @@
 }
 
 @media (max-width: 480px) {
-    .header__wrapper {
+
+    .header__wrapper,
+    .header__container {
         padding: 18px;
         gap: 20px;
         min-height: auto;
     }
 
-    .header__links {
+    .header__links,
+    .header__navigation {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
 
-    /* Убираем ограничение ширины на мобильных */
     .font__width_800 {
         max-width: 100%;
     }

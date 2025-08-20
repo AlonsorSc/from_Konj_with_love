@@ -1,0 +1,538 @@
+/* =================================================
+   СТИЛИ ТОЛЬКО ДЛЯ ВТОРОЙ СТРАНИЦЫ (index2.html)
+   Применяются только к элементам с классом .secondpage
+   ================================================= */
+
+/* Базовые стили для secondpage */
+.secondpage {
+    background-color: var(--color-primary);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    min-height: 100vh;
+}
+
+.secondpage::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -127px;
+    width: 100vw;
+    height: 197px;
+    background-image: url('/images/background-img/pattern.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: 98.5px 98.5px;
+    z-index: 1;
+}
+
+/* ===== КОМПОНЕНТЫ ДЛЯ ВТОРОЙ СТРАНИЦЫ ===== */
+
+/* Текстовые компоненты - применяются только на secondpage */
+.secondpage .text {
+    font-size: var(--font-size-18);
+    line-height: var(--font-lineheight-140);
+    color: var(--color-text);
+}
+
+.secondpage .text--size-large {
+    font-size: var(--font-size-25);
+}
+
+.secondpage .text--size-xlarge {
+    font-size: var(--font-size-28);
+    line-height: var(--font-lineheight-120);
+}
+
+.secondpage .text--weight-medium {
+    font-weight: 500;
+}
+
+.secondpage .text--weight-semibold {
+    font-weight: 600;
+}
+
+.secondpage .text--font-neco {
+    font-family: "Neco", sans-serif;
+}
+
+.secondpage .text--width-constrained {
+    max-width: 600px;
+}
+
+.secondpage .text--width-wide {
+    max-width: 800px;
+}
+
+.secondpage .text--align-center {
+    text-align: center;
+}
+
+/* ===== БЛОКИ ДЛЯ ВТОРОЙ СТРАНИЦЫ ===== */
+
+/* Header для secondpage - детальная страница проекта */
+.secondpage .header {
+    background-color: transparent;
+}
+
+.secondpage .detail-header {
+    display: flex;
+    flex-direction: column;
+    gap: 101px;
+    padding: 30px;
+    min-height: 300px;
+}
+
+.secondpage .detail-header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.secondpage .detail-header__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.secondpage .detail-header__logo {
+    width: auto;
+    height: auto;
+}
+
+.secondpage .detail-header__description {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Section для secondpage */
+.secondpage .section {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Content Card - двухколоночная карточка для secondpage */
+.secondpage .content-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.secondpage .content-card__info {
+    display: flex;
+    gap: 10px;
+}
+
+.secondpage .content-card__block {
+    min-height: 194px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.secondpage .content-card__block--centered {
+    align-items: center;
+    text-align: center;
+    padding: 30px 350px;
+}
+
+.secondpage .content-card__image-section {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--color-white);
+}
+
+.secondpage .content-card__image-container {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.secondpage .content-card__image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Feature Card - широкая карточка для secondpage */
+.secondpage .feature-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.secondpage .feature-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 350px;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.secondpage .feature-card__image-container {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.secondpage .feature-card__image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Image Only Card - карточка только с изображением */
+.secondpage .image-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.secondpage .image-card__image-section {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--color-white);
+}
+
+.secondpage .image-card__image-container {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.secondpage .image-card__image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Тематические модификаторы для secondpage */
+.secondpage .content-card__image-container--dema,
+.secondpage .feature-card__image-container--tech,
+.secondpage .image-card__image-container--tech {
+    background-color: var(--color-background-dema);
+}
+
+.secondpage .content-card__image-container--tech,
+.secondpage .feature-card__image-container--tech,
+.secondpage .image-card__image-container--tech {
+    background-color: var(--color-primary);
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ ВТОРОЙ СТРАНИЦЫ ===== */
+
+/* 1200px - Небольшие планшеты и маленькие ноутбуки */
+@media (max-width: 1200px) {
+    .secondpage .text {
+        font-size: 16px;
+        /* было 18px */
+    }
+
+    .secondpage .text--size-xlarge {
+        font-size: 25px;
+        /* было 28px */
+    }
+
+    .secondpage .content-card__block,
+    .secondpage .feature-card__content {
+        padding: 27px;
+        /* было 30px */
+        min-height: 175px;
+        /* было 194px */
+    }
+
+    .secondpage .content-card__block--centered {
+        padding: 27px 315px;
+        /* было 30px 350px */
+    }
+
+    .secondpage .feature-card__content {
+        padding: 23px 315px;
+        /* было 25px 350px */
+    }
+
+    .secondpage .content-card__image-container,
+    .secondpage .feature-card__image-container,
+    .secondpage .image-card__image-container {
+        padding: 18px;
+        /* было 20px */
+    }
+}
+
+/* 1024px - Планшеты в альбомной ориентации */
+@media (max-width: 1024px) {
+    .secondpage .text {
+        font-size: 14px;
+        /* было 18px */
+    }
+
+    .secondpage .text--size-xlarge {
+        font-size: 22px;
+        /* было 28px */
+    }
+
+    .secondpage .content-card__info {
+        flex-direction: column;
+    }
+
+    .secondpage .content-card__block {
+        padding: 24px;
+        /* было 30px */
+        min-height: 155px;
+        /* было 194px */
+    }
+
+    .secondpage .content-card__block--centered {
+        padding: 24px 80px;
+        /* было 30px 350px */
+    }
+
+    .secondpage .feature-card__content {
+        padding: 20px 80px;
+        /* было 25px 350px */
+    }
+
+    .secondpage .content-card__image-container,
+    .secondpage .feature-card__image-container,
+    .secondpage .image-card__image-container {
+        padding: 16px;
+        /* было 20px */
+        aspect-ratio: 16 / 9;
+        /* более широкий формат */
+    }
+}
+
+/* 768px - Планшеты в портретной ориентации */
+@media (max-width: 768px) {
+    .secondpage {
+        padding: 25px;
+        /* было 50px */
+    }
+
+    .secondpage .detail-header {
+        padding: 21px;
+        /* было 30px */
+        gap: 30px;
+        /* было 101px */
+        min-height: auto;
+    }
+
+    .secondpage .detail-header__content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .secondpage .detail-header__navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .secondpage .text {
+        font-size: 13px;
+        /* было 18px */
+    }
+
+    .secondpage .text--size-xlarge {
+        font-size: 20px;
+        /* было 28px */
+    }
+
+    .secondpage .content-card__block {
+        padding: 21px;
+        /* было 30px */
+        min-height: 136px;
+        /* было 194px */
+    }
+
+    .secondpage .content-card__block--centered {
+        padding: 21px 60px;
+        /* было 30px 350px */
+    }
+
+    .secondpage .feature-card__content {
+        padding: 18px 60px;
+        /* было 25px 350px */
+    }
+
+    .secondpage .content-card__image-container,
+    .secondpage .feature-card__image-container,
+    .secondpage .image-card__image-container {
+        padding: 14px;
+        /* было 20px */
+        aspect-ratio: 4 / 3;
+        /* более квадратный */
+    }
+}
+
+/* 480px - Мобильные устройства */
+@media (max-width: 480px) {
+    .secondpage {
+        padding: 20px;
+        /* было 50px */
+        gap: 5px;
+        /* было 10px */
+    }
+
+    .secondpage .detail-header {
+        padding: 18px;
+        /* было 30px */
+        gap: 20px;
+        /* было 101px */
+        min-height: auto;
+    }
+
+    .secondpage .detail-header__navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .secondpage .text {
+        font-size: 11px;
+        /* было 18px */
+        line-height: 150%;
+        /* увеличиваем для читаемости */
+    }
+
+    .secondpage .text--size-xlarge {
+        font-size: 17px;
+        /* было 28px */
+        line-height: 130%;
+        /* увеличиваем для читаемости */
+    }
+
+    .secondpage .text--width-constrained,
+    .secondpage .text--width-wide {
+        max-width: none;
+    }
+
+    .secondpage .content-card__block {
+        padding: 18px;
+        /* было 30px */
+        min-height: 116px;
+        /* было 194px */
+    }
+
+    .secondpage .content-card__block--centered {
+        padding: 18px 30px;
+        /* было 30px 350px */
+    }
+
+    .secondpage .feature-card__content {
+        padding: 15px 30px;
+        /* было 25px 350px */
+    }
+
+    .secondpage .content-card__image-container,
+    .secondpage .feature-card__image-container,
+    .secondpage .image-card__image-container {
+        padding: 12px;
+        /* было 20px */
+        aspect-ratio: 1 / 1;
+        /* квадратный формат */
+    }
+
+    /* Закругления для мобильных */
+    .secondpage .section {
+        border-radius: 6px;
+        /* было 10px */
+    }
+
+    .secondpage .content-card__image-container,
+    .secondpage .feature-card__image-container,
+    .secondpage .image-card__image-container,
+    .secondpage .content-card__block,
+    .secondpage .feature-card {
+        border-radius: 3px;
+        /* было 5px или 10px */
+    }
+}
+
+/* ===== ОБРАБОТКА ОШИБОК ИЗОБРАЖЕНИЙ ДЛЯ ВТОРОЙ СТРАНИЦЫ ===== */
+
+.secondpage .content-card__image:not([src]),
+.secondpage .feature-card__image:not([src]),
+.secondpage .image-card__image:not([src]),
+.secondpage .content-card__image[src=""],
+.secondpage .feature-card__image[src=""],
+.secondpage .image-card__image[src=""] {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23f8f9fa" stroke="%23dee2e6" stroke-width="2" stroke-dasharray="10,5"/><text x="150" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="%236c757d">📷</text><text x="150" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="%236c757d">Изображение недоступно</text></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+/* ===== ДОПОЛНИТЕЛЬНЫЕ УТИЛИТЫ ДЛЯ ВТОРОЙ СТРАНИЦЫ ===== */
+
+.secondpage .image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.secondpage .image--responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.secondpage .image--contain {
+    object-fit: contain;
+}
+
+
+/* Fallback контейнер для ошибок загрузки */
+.secondpage .image-fallback {
+    width: 100%;
+    min-height: 200px;
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #6c757d;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding: 25px;
+}

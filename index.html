@@ -14,178 +14,304 @@
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="/style/components.css">
     <link rel="stylesheet" href="./style/page.css">
+    <link rel="stylesheet" href="./style/homepage.css">
+
 </head>
 
 <body class="homepage">
-
     <header class="header">
-        <div class="header__wrapper">
-            <div class="header__info">
+        <div class="header__container">
+            <div class="header__content">
                 <div class="header__logo">
-                    <img src="/images/logo-background-white.svg" alt="logo">
+                    <img src="/images/logo-background-white.svg" alt="Portfolio logo">
                 </div>
-                <ul class="links links_header">
-                    <li class="link__item"><a href="#">LinkedIn</a></li>
-                    <li class="link__item"><a href="mailto:nikkmant@gmail.com">nikkmant@gmail.com</a></li>
-                    <li class="link__item"><a href="#">Telegram</a></li>
-                </ul>
+                <div>
+                    <nav class="header__nav-links">
+                        <ul class="links-list">
+                            <li><a href="#" class="link text">LinkedIn</a></li>
+                            <li><a href="mailto:nikkmant@gmail.com" class="link text">nikkmant@gmail.com</a></li>
+                            <li><a href="#" class="link text">Telegram</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
-            <div class="header__links">
+            <!-- ИСПРАВЛЕНИЕ: новая структура навигации для лучшего контроля порядка на адаптиве -->
+            <div class="header__navigation">
                 <div class="header__about">
-                    <p class="header__about-text font-neco font__width_800">
-                        I’m Nikita Mant, a Senior UX/UI & Product Designer crafting
+                    <p class="text text--size-xlarge text--font-neco text--weight-medium text--width-wide">
+                        I'm Nikita Mant, a Senior UX/UI & Product Designer crafting
                         user-centric, modular, and flexible design solutions across
                         healthcare, B2B/B2C, gaming, e-commerce, and SaaS.
                     </p>
                 </div>
-                <div class="copywhrite copywhrite_header">
-                    &copy;2025
-                </div>
+                <span class="text header__copyright">©2025</span>
             </div>
         </div>
-
     </header>
 
+    <!-- DEMA Project -->
     <section class="section">
-        <div class="card">
-            <div class="card__info">
-                <div class="card__block">
-                    <h2 class="font-neco">DEMA</h2>
-                    <div class="card__experience">
-                        <div>Lead Product Designer<span class="card__date">2022 – 2024</span></div>
-                        <div class="border"></div>
+        <article class="project-card">
+            <div class="project-card__content">
+                <header class="project-card__header">
+                    <h2 class="text text--size-xxlarge text--font-neco text--weight-bold">DEMA</h2>
+                    <div class="project-card__experience">
+                        <span class="text">Lead Product Designer</span>
+                        <time class="text" datetime="2022/2024">2022 – 2024</time>
                     </div>
+                    <hr class="divider">
+                </header>
+
+                <div class="project-card__achievements">
+                    <div class="text project-card__achievement">2.5x increase in conversions</div>
+                    <div class="text project-card__achievement">10% better lead quality</div>
+                    <div class="text project-card__achievement">Millions in extra deal flow</div>
+                    <hr class="divider">
                 </div>
-                <div class="card__conditions">
-                    <div class="card__conditions-text">→ 2.5x increase in conversions</div>
-                    <div class="card__conditions-text">→ 10% better lead quality</div>
-                    <div class="card__conditions-text">→ Millions in extra deal flow</div>
-                    <div class="border"></div>
-                </div>
-                <div class="card__about">
-                    <p class="font__width_600">
+
+                <div class="project-card__description">
+                    <p class="text text--weight-semibold text--width-constrained">
                         Rehabilitation Centers offer personalized
                         recovery programs based on comprehensive diagnostics, including kinesitherapy, massage, and
-                        physiotherapy. </p>
+                        physiotherapy.
+                    </p>
                 </div>
             </div>
 
-            <div class="card__img dema">
-                <img src="./images/background-img/calendar.svg" alt="Окно программы Дема">
+            <!-- Универсальный контейнер изображения -->
+            <div class="project-card__image-container project-card__image-container--dema">
+                <img src="./images/background-img/calendar.svg" alt="DEMA application interface mockup"
+                    class="project-card__image">
             </div>
-        </div>
+        </article>
     </section>
 
+    <!-- FiveMods Project -->
     <section class="section">
-        <div class="card">
-            <div class="card__info">
-                <div class="card__block">
-                    <h2 class="font-neco">FiveMods</h2>
-                    <div class="card__experience">
-                        <div>Lead Product Designer<span class="card__date">2022 – 2024</span></div>
-                        <div class="border"></div>
+        <article class="project-card">
+            <div class="project-card__content">
+                <header class="project-card__header">
+                    <h2 class="text text--size-xxlarge text--font-neco text--weight-bold">FiveMods</h2>
+                    <div class="project-card__experience">
+                        <span class="text">Lead Product Designer</span>
+                        <time class="text" datetime="2022/2024">2022 – 2024</time>
                     </div>
+                    <hr class="divider">
+                </header>
+
+                <div class="project-card__achievements">
+                    <div class="text project-card__achievement">2.5x increase in conversions</div>
+                    <div class="text project-card__achievement">10% better lead quality</div>
+                    <div class="text project-card__achievement">Millions in extra deal flow</div>
+                    <hr class="divider">
                 </div>
-                <div class="card__conditions">
-                    <div class="card__conditions-text">→ 2.5x increase in conversions</div>
-                    <div class="card__conditions-text">→ 10% better lead quality</div>
-                    <div class="card__conditions-text">→ Millions in extra deal flow</div>
-                    <div class="border"></div>
-                </div>
-                <div class="card__about">
-                    <p class="font__width_600">
-                        Rehabilitation Centers offer personalized
-                        recovery programs based on
-                        comprehensive diagnostics, including
-                        kinesitherapy, massage, and physiotherapy.
+
+                <div class="project-card__description">
+                    <p class="text text--weight-semibold text--width-constrained">
+                        Application that allows users to automatically install mods for the GTA V multiplayer
+                        modification framework, FiveM. It provides a library of mods for various aspects of the game.
                     </p>
                 </div>
             </div>
 
-            <div class="card__img fiveMods">
-                <img src="./images/background-img/FiveMods.svg" alt="Окно интерфейса FiveMods">
+            <div class="project-card__image-container project-card__image-container--fivemods">
+                <img src="./images/background-img/FiveMods.svg" alt="FiveMods application interface"
+                    class="project-card__image">
             </div>
-        </div>
+        </article>
     </section>
 
+    <!-- Enhanced Figma Interface Project -->
     <section class="section">
-        <div class="card">
-            <div class="card__info">
-                <div class="card__block">
-                    <h2 class="font-neco">Enhanced Figma <br />Interface</h2>
-                    <p class="font__width_600 card__about">
+        <article class="project-card">
+            <div class="project-card__content">
+                <header class="project-card__header">
+                    <h2 class="text text--size-xxlarge text--font-neco text--weight-bold">
+                        Enhanced Figma<br>Interface
+                    </h2>
+                    <p class="text text--weight-semibold text--width-constrained">
                         Improved the Figma interface to deliver a
                         more intuitive and customizable user
                         experience.
                     </p>
-                </div>
+                </header>
             </div>
 
-            <div class="card__img figma">
-                <img src="./images/background-img/Figma.svg" alt="Окно интерфейса Figma">
+            <div class="project-card__image-container project-card__image-container--figma">
+                <img src="./images/background-img/Figma.svg" alt="Enhanced Figma interface design"
+                    class="project-card__image">
             </div>
-        </div>
+        </article>
     </section>
 
+    <!-- Logos Project -->
     <section class="section">
-        <div class="card">
-            <div class="card__info">
-                <div class="card__block">
-                    <h2 class="font-neco">Logos</h2>
-                    <p class="font__width_600 card__about">
-                        Improved the Figma interface to deliver a
-                        more intuitive and customizable user
-                        experience.
+        <article class="project-card">
+            <div class="project-card__content">
+                <header class="project-card__header">
+                    <h2 class="text text--size-xxlarge text--font-neco text--weight-bold">Logos</h2>
+                    <p class="text text--weight-semibold text--width-constrained">
+                        Collection of brand identity designs and logo concepts
+                        crafted for various clients across different industries.
                     </p>
-                </div>
+                </header>
             </div>
 
-            <div class="card__img logos">
-                <img src="./images/background-img/Logos.svg" alt="Окно интерфейса Figma">
+            <div class="project-card__image-container project-card__image-container--logos">
+                <img src="./images/background-img/Logos.svg" alt="Logo design collection showcase"
+                    class="project-card__image">
             </div>
-        </div>
+        </article>
     </section>
 
+    <!-- Red Dead Redemption II Project -->
     <section class="section">
-        <div class="card">
-            <div class="card__info">
-                <div class="card__block">
-                    <h2 class="font-neco">Red Dead<br /> Redemption II<br /> Interface & Mini<br /> Games</h2>
-                    <p class="font__width_600 card__about">
-                        Improved the Figma interface to deliver a
-                        more intuitive and customizable user
-                        experience.
+        <article class="project-card">
+            <div class="project-card__content">
+                <header class="project-card__header">
+                    <h2 class="text text--size-xxlarge text--font-neco text--weight-bold">
+                        Red Dead<br>Redemption II<br>Interface & Mini<br>Games
+                    </h2>
+                    <p class="text text--weight-semibold text--width-constrained">
+                        Redesigned game interface and mini-game experiences
+                        to enhance player immersion and usability.
                     </p>
-                </div>
+                </header>
             </div>
 
-            <div class="card__img rdr">
-                <img src="./images/background-img/rdr.svg" alt="Окно интерфейса RedDead Redemption II">
+            <div class="project-card__image-container project-card__image-container--rdr">
+                <img src="./images/background-img/rdr.svg" alt="Red Dead Redemption II interface design"
+                    class="project-card__image">
             </div>
-        </div>
+        </article>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer__wrapper">
+        <div class="footer__container">
             <div class="footer__icon">
-                <img src="./images/logo-footer.svg" alt="Иконки папок в футере">
+                <img src="./images/logo-footer.svg" alt="Footer brand icon">
             </div>
             <div class="footer__links">
-                <div>
-                    <ul class="links links_footer">
-                        <li class="link__item"><a href="#">LinkedIn</a></li>
-                        <li class="link__item"><a href="mailto:nikkmant@gmail.com">nikkmant@gmail.com</a></li>
-                        <li class="link__item"><a href="#">Telegram</a></li>
+                <nav>
+                    <ul class="links-list">
+                        <li><a href="#" class="link text">LinkedIn</a></li>
+                        <li><a href="mailto:nikkmant@gmail.com" class="link text">nikkmant@gmail.com</a></li>
+                        <li><a href="#" class="link text">Telegram</a></li>
                     </ul>
-                </div>
-                <span class="copywhrite copywhrite_footer">
-                    &copy;2025
-                </span>
+                </nav>
+                <span class="text">©2025</span>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript для обработки изображений -->
+    <script>
+        // Универсальная обработка ошибок загрузки изображений только для homepage
+        document.addEventListener('DOMContentLoaded', function () {
+            // Проверяем, что мы на homepage
+            if (!document.body.classList.contains('homepage')) return;
+
+            const images = document.querySelectorAll('.project-card__image');
+
+            images.forEach(img => {
+                // Устанавливаем начальную прозрачность для плавной загрузки
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+
+                img.addEventListener('load', function () {
+                    this.style.opacity = '1';
+                });
+
+                img.addEventListener('error', function () {
+                    console.warn('Изображение не загрузилось:', this.src);
+
+                    // Создаем fallback элемент
+                    const fallback = document.createElement('div');
+                    fallback.className = 'image-fallback';
+                    fallback.style.cssText = `
+                        width: 100%;
+                        min-height: 200px;
+                        background: #f8f9fa;
+                        border: 2px dashed #dee2e6;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 5px;
+                        color: #6c757d;
+                        font-family: "Inter Tight", sans-serif;
+                        font-size: 14px;
+                        text-align: center;
+                        padding: 25px;
+                    `;
+                    fallback.innerHTML = `
+                        <div>
+                            <div style="font-size: 24px; margin-bottom: 8px;">📷</div>
+                            <div>Изображение недоступно</div>
+                        </div>
+                    `;
+
+                    this.style.display = 'none';
+                    this.parentNode.insertBefore(fallback, this);
+                });
+            });
+        });
+
+        // Функция для динамической смены изображений (для тестирования)
+        function updateProjectImage(projectIndex, newImageSrc, altText = '') {
+            const projects = document.querySelectorAll('.project-card');
+            if (projects[projectIndex]) {
+                const img = projects[projectIndex].querySelector('.project-card__image');
+                if (img) {
+                    img.src = newImageSrc;
+                    if (altText) img.alt = altText;
+                }
+            }
+        }
+
+        // Функция для адаптивного изменения размеров изображений
+        function adjustImageContainers() {
+            if (!document.body.classList.contains('homepage')) return;
+
+            const containers = document.querySelectorAll('.project-card__image-container');
+
+            containers.forEach(container => {
+                const img = container.querySelector('img');
+                if (img && img.complete && img.naturalWidth > 0) {
+                    const aspectRatio = img.naturalWidth / img.naturalHeight;
+
+                    // Адаптируем padding в зависимости от соотношения сторон
+                    if (aspectRatio > 2.5) {
+                        // Очень широкое изображение (панорама)
+                        container.style.padding = '10px 20px';
+                    } else if (aspectRatio > 1.8) {
+                        // Широкое изображение
+                        container.style.padding = '15px 20px';
+                    } else if (aspectRatio < 0.6) {
+                        // Очень высокое изображение (портрет)
+                        container.style.padding = '20px 10px';
+                    } else if (aspectRatio < 1) {
+                        // Высокое изображение
+                        container.style.padding = '20px 15px';
+                    } else {
+                        // Стандартное соотношение
+                        container.style.padding = '20px';
+                    }
+                }
+            });
+        }
+
+        // Запускаем адаптацию после загрузки всех изображений
+        window.addEventListener('load', adjustImageContainers);
+
+        // Также запускаем при изменении размера окна
+        window.addEventListener('resize', adjustImageContainers);
+
+        // Для тестирования - примеры использования:
+        // updateProjectImage(0, 'path/to/new/image.jpg', 'New alt text');
+        // Это обновит изображение первой карточки (индекс 0)
+    </script>
 </body>
 
 </html>
